@@ -19,6 +19,7 @@ namespace ToiDau
         {
             Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<WelcomePage>("WelcomePage");
         }
     }
 }

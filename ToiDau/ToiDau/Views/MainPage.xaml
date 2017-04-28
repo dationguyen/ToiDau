@@ -4,20 +4,14 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="ToiDau.Views.MainPage"
-             Title="MainPage">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="{Binding Title}" />
-        <Grid WidthRequest="100" HeightRequest="30" BackgroundColor="White">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid VerticalOptions="Center">
-                <Label Text="On" BackgroundColor="Green"></Label>
-            </Grid>
-            <Grid Grid.Column="1">
-                <Label  Text="Off"></Label>
-            </Grid>
-        </Grid>
-    </StackLayout>
+             BackgroundColor="#103667" 
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Text="Toi Dau"
+               TextColor="White" FontSize="70" FontAttributes="Bold"/>
+            <Label VerticalOptions="End" HorizontalOptions="Center" Text="by Pizitek" 
+               TextColor="White" FontSize="20" FontAttributes="Bold" Margin="0,0,0,10"/>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
