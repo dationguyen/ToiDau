@@ -8,10 +8,19 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <Label VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Text="Toi Dau"
-               TextColor="White" FontSize="70" FontAttributes="Bold"/>
-            <Label VerticalOptions="End" HorizontalOptions="Center" Text="by Pizitek" 
-               TextColor="White" FontSize="20" FontAttributes="Bold" Margin="0,0,0,10"/>
+            <Label VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="Center" 
+                   Text="Toi Dau"
+                   TextColor="White" 
+                   FontSize="70" 
+                   FontAttributes="Bold"/>
+            <Label VerticalOptions="End" 
+                   HorizontalOptions="Center" 
+                   Text="by Pizitek"
+                   TextColor="White" 
+                   FontSize="20" 
+                   FontAttributes="Bold" 
+                   Margin="0,0,0,10"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

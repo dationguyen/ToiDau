@@ -10,7 +10,7 @@ namespace ToiDau.ViewModels
 {
     public class MainPageViewModel : BindableBase, INavigationAware
     {
-        private INavigationService _iNavigationService;
+        private INavigationService _iNavigationService;      
 
         public MainPageViewModel(INavigationService navigationService)
         {
@@ -20,7 +20,7 @@ namespace ToiDau.ViewModels
         public void OnNavigatedFrom(NavigationParameters parameters)
         {
 
-        }
+        }     
 
         public void OnNavigatingTo(NavigationParameters parameters)
         {
@@ -29,7 +29,7 @@ namespace ToiDau.ViewModels
         private async void NavigationToWelcomePage()
         {
             await Task.Delay(2000);
-            this._iNavigationService.NavigateAsync("WelcomePage", null, false, false);
+            await _iNavigationService.NavigateAsync("WelcomePage", null, false, false);
         }
         public void OnNavigatedTo(NavigationParameters parameters)
         {
