@@ -7,19 +7,19 @@ using System.Linq;
 
 namespace ToiDau.ViewModels
 {
-    public class LoginPage3ViewModel : BindableBase, INavigationAware
+    public class DashboardPageViewModel : BindableBase, INavigationAware
     {
-        private INavigationService _iNavigationService;
-        public DelegateCommand NavigateToDashboardCommand { get; set; }
-        public LoginPage3ViewModel(INavigationService navigationService)
+        INavigationService _iNavigationService;
+        public DelegateCommand NotificationCommand { get; set; }
+        public DashboardPageViewModel(INavigationService navigationService)
         {
             _iNavigationService = navigationService;
-            NavigateToDashboardCommand = new DelegateCommand(NavigateToDashboard);
+            NotificationCommand = new DelegateCommand(OnNotificationCommandExecuted);
         }
 
-        private void NavigateToDashboard()
+        private void OnNotificationCommandExecuted()
         {
-            _iNavigationService.NavigateAsync("/MyMasterDetailPage/NavigationPage/DashboardPage", null, false, false);
+            //Do something
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)

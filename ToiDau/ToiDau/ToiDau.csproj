@@ -36,12 +36,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Customs\ToggleButton .cs" />
+    <Compile Include="ToggleButton.cs" />
+    <Compile Include="ViewModels\AboutPageViewModel.cs" />
+    <Compile Include="ViewModels\DashboardPageViewModel.cs" />
+    <Compile Include="ViewModels\HelpPageViewModel.cs" />
     <Compile Include="ViewModels\LoginPage1ViewModel.cs" />
     <Compile Include="ViewModels\LoginPage2ViewModel.cs" />
     <Compile Include="ViewModels\LoginPage3ViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\MyMasterDetailPageViewModel.cs" />
+    <Compile Include="ViewModels\ProfilePageViewModel.cs" />
+    <Compile Include="ViewModels\PromotionsPageViewModel.cs" />
     <Compile Include="ViewModels\WelcomePageViewModel.cs" />
+    <Compile Include="Views\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashboardPage.xaml.cs">
+      <DependentUpon>DashboardPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HelpPage.xaml.cs">
+      <DependentUpon>HelpPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginPage1.xaml.cs">
       <DependentUpon>LoginPage1.xaml</DependentUpon>
     </Compile>
@@ -50,6 +65,15 @@
     </Compile>
     <Compile Include="Views\LoginPage3.xaml.cs">
       <DependentUpon>LoginPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyMasterDetailPage.xaml.cs">
+      <DependentUpon>MyMasterDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PromotionsPage.xaml.cs">
+      <DependentUpon>PromotionsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
@@ -125,6 +149,42 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\LoginPage3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MyMasterDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\DashboardPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PromotionsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\HelpPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AboutPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

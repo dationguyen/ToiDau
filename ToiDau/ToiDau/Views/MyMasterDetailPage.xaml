@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="ToiDau.Views.MyMasterDetailPage">
+    <MasterDetailPage.Master>
+        <NavigationPage Title="Navigation Page" Icon="hamburger.png">
+            <x:Arguments>
+                <ContentPage NavigationPage.HasNavigationBar="False" BackgroundColor="#2F435B">
+                    <StackLayout>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout>
+                                <Image Source="{Binding Image}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,20,0,20"/>
+                                <Label Text="{Binding FullName}" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+                                <Label Text="{Binding Role}" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+                            </StackLayout>
+                            <Button Grid.Row="1" Text="Profile" BackgroundColor="#1B2D43" TextColor="White" 
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="NavigationPage/ProfilePage"/>
+                            <Button Grid.Row="2" Text="Promotions" BackgroundColor="#1B2D43" TextColor="White" 
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="NavigationPage/PromotionsPage"/>
+                            <Button Grid.Row="3" Text="Help" BackgroundColor="#1B2D43" TextColor="White" 
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="NavigationPage/HelpPage"/>
+                            <Button Grid.Row="4" Text="About" BackgroundColor="#1B2D43" TextColor="White" 
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="NavigationPage/AboutPage"/>
+                        </Grid>
+                    </StackLayout>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

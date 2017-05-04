@@ -14,7 +14,8 @@
                    TextColor="Black"
                    FontSize="18"/>
             <Entry Text="{Binding Number}"
-                   FontSize="18"/>
+                   FontSize="18"
+                   Keyboard="Numeric"/>
         </StackLayout>
         <Button Text="Login" 
                 VerticalOptions="End" 

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ToiDau.Views.PromotionsPage"
+             Title="Promotion"
+             BackgroundColor="White">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="notification.png" Order="Primary" Command="{Binding NotificationCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Margin="0,100,0,0">
+            <Label Text="TOIDAU-FDF343" TextColor="Black" FontSize="25" FontAttributes="Bold" 
+                   HorizontalOptions="Center"/>
+            <Label Text="Share code with your friend to have free parking" FontSize="15" TextColor="Black"
+                   HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button BackgroundColor="White" Image="fb_icon.png" Command="{Binding FacebookCommand}"/>
+                <Button BackgroundColor="White" Image="tw_icon.png" Command="{Binding TwitterCommand}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
