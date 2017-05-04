@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ToiDau.Views.LoginPage2"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImage="BackgroundLoginPage.png">
+    <StackLayout>
+        <Grid Margin="0,150,0,0"
+              VerticalOptions="StartAndExpand"
+              HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Your number:" 
+                   TextColor="Black" 
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   Grid.ColumnSpan="4"/>
+            <Label Text="{Binding Number}" 
+                   TextColor="Black"
+                   FontSize="18"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="4"
+                   HorizontalOptions="Center"/>
+            <Label Text="Enter verify code via sms:" 
+                   TextColor="Black"
+                   FontSize="18"
+                   Grid.Row="2"
+                   Grid.ColumnSpan="4"
+                   HorizontalOptions="Center"/>
+            <Image Source="square.png"
+                   Grid.Row="3"
+                   Grid.Column="0"/>
+            <Entry Grid.Row="3"
+                   Grid.Column="0"
+                   Text="{Binding Number1}"
+                   FontSize="18"
+                   TextColor="Black"
+                   HorizontalOptions="Center"/>
+            <Image Source="square.png"
+                   Grid.Row="3"
+                   Grid.Column="1"/>
+            <Entry Grid.Row="3"
+                   Grid.Column="1"
+                   Text="{Binding Number2}"
+                   FontSize="18"
+                   TextColor="Black"
+                   HorizontalOptions="Center"/>
+            <Image Source="square.png"
+                   Grid.Row="3"
+                   Grid.Column="2"/>
+            <Entry Grid.Row="3"
+                   Grid.Column="2"
+                   Text="{Binding Number3}"
+                   FontSize="18"
+                   TextColor="Black"
+                   HorizontalOptions="Center"/>
+            <Image Source="square.png"
+                   Grid.Row="3"
+                   Grid.Column="3"/>
+            <Entry Grid.Row="3"
+                   Grid.Column="3"
+                   Text="{Binding Number4}"
+                   FontSize="18"
+                   TextColor="Black"
+                   HorizontalOptions="Center"/>
+        </Grid>
+        <Button Text="Login" 
+                VerticalOptions="End" 
+                HorizontalOptions="Center" 
+                WidthRequest="Infinity" 
+                BackgroundColor="#103667" 
+                TextColor="White"
+                Command="{Binding NavigateToLoginPage3Command}"/>
+    </StackLayout>
+</ContentPage>
