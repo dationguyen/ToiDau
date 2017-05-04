@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToiDau", "ToiDau\ToiDau\ToiDau.csproj", "{B6AABFF0-C115-4C9B-9F78-C2A2B3AE708B}"
 EndProject
@@ -228,6 +228,8 @@ Global
 		{CFB9BA87-46B7-4A55-8D3A-635B1D85EB87}.AppStore|x86.Build.0 = Release|x86
 		{CFB9BA87-46B7-4A55-8D3A-635B1D85EB87}.AppStore|x86.Deploy.0 = Release|x86
 		{CFB9BA87-46B7-4A55-8D3A-635B1D85EB87}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CFB9BA87-46B7-4A55-8D3A-635B1D85EB87}.Debug|Any CPU.Build.0 = Debug|x86
+		{CFB9BA87-46B7-4A55-8D3A-635B1D85EB87}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{CFB9BA87-46B7-4A55-8D3A-635B1D85EB87}.Debug|ARM.ActiveCfg = Debug|ARM
 		{CFB9BA87-46B7-4A55-8D3A-635B1D85EB87}.Debug|ARM.Build.0 = Debug|ARM
 		{CFB9BA87-46B7-4A55-8D3A-635B1D85EB87}.Debug|ARM.Deploy.0 = Debug|ARM
