@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:cView="clr-namespace:ToiDau.ContentViews"
              x:Class="ToiDau.Views.DashboardPage"
              Title="Dashboard">
     <ContentPage.ToolbarItems>
@@ -25,6 +26,7 @@
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
                 <Image Source="maps.png" HeightRequest="400"></Image>
             </StackLayout>
+            <cView:ToggleButton></cView:ToggleButton>
             <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
                 <Label Text="You don't have any parking slot nearby." TextColor="DarkGray"
                    FontSize="18" Margin="0,0,0,8" HorizontalOptions="Center"/>

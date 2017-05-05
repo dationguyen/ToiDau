@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace Testing
+namespace ToiDau.ContentViews
 {
-    class ToggleButton : ContentView
+    public partial class ToggleButton : ContentView
     {
         public static readonly BindableProperty CommandProperty =
-            BindableProperty.Create("Command", typeof(ICommand), typeof(ToggleButton));
+             BindableProperty.Create("Command", typeof(ICommand), typeof(ToggleButton));
 
         public static readonly BindableProperty CommandParameterProperty =
             BindableProperty.Create("CommandParameter", typeof(object), typeof(ToggleButton));
@@ -109,11 +105,11 @@ namespace Testing
 
                                if (Animate)
                                {
-                                   Device.BeginInvokeOnMainThread(() =>
+                                   Device.BeginInvokeOnMainThread(async () =>
                                    {
-                                       this.ScaleTo(0.8, 50, Easing.Linear);
-                                       Task.Delay(100);
-                                       this.ScaleTo(1, 50, Easing.Linear);
+                                       await this.ScaleTo(0.8, 50, Easing.Linear);
+                                       await Task.Delay(100);
+                                       await this.ScaleTo(1, 50, Easing.Linear);
                                    });
 
                                }
