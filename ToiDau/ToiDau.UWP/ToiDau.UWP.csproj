@@ -108,6 +108,16 @@
     <None Include="ToiDau.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\BackgroundLoginPage.png" />
+    <Content Include="Assets\Images\fb_icon.png" />
+    <Content Include="Assets\Images\hamburger.png" />
+    <Content Include="Assets\Images\icon.png" />
+    <Content Include="Assets\Images\maps.png" />
+    <Content Include="Assets\Images\notification.png" />
+    <Content Include="Assets\Images\off_toggle_button.png" />
+    <Content Include="Assets\Images\on_toggle_button.png" />
+    <Content Include="Assets\Images\square.png" />
+    <Content Include="Assets\Images\tw_icon.png" />
     <Content Include="BackgroundLoginPage.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

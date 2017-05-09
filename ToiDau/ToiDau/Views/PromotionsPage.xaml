@@ -7,7 +7,7 @@
              Title="Promotion"
              BackgroundColor="White">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="notification.png" Order="Primary" Command="{Binding NotificationCommand}"/>
+        <ToolbarItem x:Name="ToolbarItem" Order="Primary" Command="{Binding NotificationCommand}"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Margin="0,100,0,0">
@@ -16,8 +16,8 @@
             <Label Text="Share code with your friend to have free parking" FontSize="15" TextColor="Black"
                    HorizontalOptions="Center"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Button BackgroundColor="White" Image="fb_icon.png" Command="{Binding FacebookCommand}"/>
-                <Button BackgroundColor="White" Image="tw_icon.png" Command="{Binding TwitterCommand}"/>
+                <Button x:Name="Facebook" BackgroundColor="White" Command="{Binding NavigationToSocialAccountCommand}" CommandParameter="https://www.google.com.vn/"/>
+                <Button x:Name="Twitter" BackgroundColor="White" Command="{Binding NavigationToSocialAccountCommand}" CommandParameter="https://www.google.com.vn/"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

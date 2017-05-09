@@ -5,5 +5,66 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="ToiDau.Views.ProfilePage"
              Title="Profile">
-  
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="ToolbarItem" Order="Primary" Command="{Binding NotificationCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Vertical" VerticalOptions="Start" Padding="30,0,20,20" BackgroundColor="#2F435B">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="15"/>
+                        <RowDefinition Height="65"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Source="{Binding Image}"/>
+                    <Label x:Name="FullName" Grid.Row="0" Grid.Column="1" TextColor="White" Text="{Binding FullName}" FontSize="16"/>
+                    <Label x:Name="Role" Grid.Row="1" Grid.Column="1" TextColor="White" Text="{Binding Role}" FontSize="14"/>
+                    <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" VerticalOptions="Start">
+                        <Button x:Name="Facebook" BackgroundColor="#2F435B" Command="{Binding NavigationToSocialAccountCommand}" CommandParameter="{Binding FacebookLink}"/>
+                        <Button x:Name="Twitter" BackgroundColor="#2F435B" Command="{Binding NavigationToSocialAccountCommand}" CommandParameter="{Binding TwitterLink}"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical">
+                        <Label Text="Birthday" TextColor="#635BA2" FontSize="12"/>
+                        <Label Text="{Binding BirthDay}" TextColor="White" FontSize="13"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical">
+                        <Label Text="Email" TextColor="#635BA2" FontSize="12"/>
+                        <Label Text="{Binding Email}" TextColor="White" FontSize="13"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical">
+                        <Label Text="Phone number" TextColor="#635BA2" FontSize="12"/>
+                        <Label Text="{Binding PhoneNumber}" TextColor="White" FontSize="13"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical">
+                        <Label Text="Location" TextColor="#635BA2" FontSize="12"/>
+                        <Label Text="{Binding Location}" TextColor="White" FontSize="13"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+            <StackLayout BackgroundColor="White" Orientation="Vertical" Padding="15,0,0,10">
+                <Label Text="Saved list" TextColor="Black" FontSize="14"/>
+                <ListView x:Name="SavedList" RowHeight="30">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                                    <Label Text="{Binding SavedName}" FontAttributes="Bold" FontSize="14" TextColor="Black"/>
+                                    <Label Text="{Binding SavedLocation}" FontSize="12" TextColor="Black"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

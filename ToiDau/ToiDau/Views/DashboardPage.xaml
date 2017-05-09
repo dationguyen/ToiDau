@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             xmlns:cView="clr-namespace:ToiDau.ContentViews"
+             xmlns:cView="clr-namespace:ToiDau.ContentViews;assembly:ToiDau"
              x:Class="ToiDau.Views.DashboardPage"
              Title="Dashboard">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="notification.png" Order="Primary" Command="{Binding NotificationCommand}"/>
+        <ToolbarItem x:Name="ToolbarItem" Order="Primary" Command="{Binding NotificationCommand}"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
@@ -24,12 +24,15 @@
                 <SearchBar Grid.Column="1" Grid.Row="0" Placeholder="Search" CancelButtonColor="Black" BackgroundColor="White"/>
             </Grid>
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
-                <Image Source="maps.png" HeightRequest="400"></Image>
+                <Label Text="Google Map here" TextColor="Black"/>
             </StackLayout>
-            <cView:ToggleButton></cView:ToggleButton>
-            <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+            <StackLayout Orientation="Vertical" VerticalOptions="End">
                 <Label Text="You don't have any parking slot nearby." TextColor="DarkGray"
                    FontSize="18" Margin="0,0,0,8" HorizontalOptions="Center"/>
+                <cView:ToggleButton CheckedImage="on_toggle_button.png" UnCheckedImage="off_toggle_button.png"
+                                    Enabled="True" HeightRequest="70"
+                                    WidthRequest="Infinity" HorizontalOptions="Center" 
+                                    Command="{Binding ToggleButtonCommand}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

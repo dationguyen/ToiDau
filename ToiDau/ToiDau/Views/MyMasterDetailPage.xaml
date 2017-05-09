@@ -5,7 +5,7 @@
                   prism:ViewModelLocator.AutowireViewModel="True"
                   x:Class="ToiDau.Views.MyMasterDetailPage">
     <MasterDetailPage.Master>
-        <NavigationPage Title="Navigation Page" Icon="hamburger.png">
+        <NavigationPage x:Name="NavigationPage" Title="Navigation Page">
             <x:Arguments>
                 <ContentPage NavigationPage.HasNavigationBar="False" BackgroundColor="#2F435B">
                     <StackLayout>

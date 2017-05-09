@@ -8,6 +8,30 @@ namespace ToiDau.Views
         public LoginPage2()
         {
             InitializeComponent();
+            switch (Device.RuntimePlatform)
+            {
+                case Device.Android:
+                    this.BackgroundImage = "BackgroundLoginPage.png";
+                    SquareImage1.Source = "square.png";
+                    SquareImage2.Source = "square.png";
+                    SquareImage3.Source = "square.png";
+                    SquareImage4.Source = "square.png";
+                    break;
+                case Device.Windows:
+                    this.BackgroundImage = "Assets/Images/BackgroundLoginPage.png";
+                    SquareImage1.Source = "Assets/Images/square.png";
+                    SquareImage2.Source = "Assets/Images/square.png";
+                    SquareImage3.Source = "Assets/Images/square.png";
+                    SquareImage4.Source = "Assets/Images/square.png";
+                    break;
+                case Device.iOS:
+                    this.BackgroundImage = "Images/BackgroundLoginPage.png";
+                    SquareImage1.Source = "Images/square.png";
+                    SquareImage2.Source = "Images/square.png";
+                    SquareImage3.Source = "Images/square.png";
+                    SquareImage4.Source = "Images/square.png";
+                    break;
+            }
             entryPin1.Focus();
         }
 

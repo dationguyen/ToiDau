@@ -4,8 +4,7 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="ToiDau.Views.WelcomePage" 
-             NavigationPage.HasNavigationBar="False"
-             BackgroundImage="BackgroundLoginPage.png">
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
             <Label HorizontalOptions="Center"
