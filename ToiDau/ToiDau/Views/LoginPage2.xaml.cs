@@ -35,11 +35,10 @@ namespace ToiDau.Views
             entryPin1.Focus();
         }
 
-
-
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
             string _text = ((Entry)sender).Text;      //Get Current Text
+
             if (_text.Length > 1)       //If it is more than your character restriction
             {
                 _text = _text.Remove(_text.Length - 1);  // Remove Last character
