@@ -29,6 +29,8 @@ namespace ToiDau
             Container.RegisterTypeForNavigation<PromotionsPage>("PromotionsPage");
             Container.RegisterTypeForNavigation<HelpPage>("HelpPage");
             Container.RegisterTypeForNavigation<AboutPage>("AboutPage");
+            Container.RegisterTypeForNavigation<DashboardWithoutAss>("DashboardWithoutAss");
+            Container.RegisterTypeForNavigation<SearchPage>("SearchPage");
         }
     }
 }

@@ -2756,11 +2756,11 @@ namespace ToiDau.Droid
 			// aapt resource value: 0x7f02010e
 			public const int notification_icon_background = 2130837774;
 			
-			// aapt resource value: 0x7f020115
-			public const int notification_template_icon_bg = 2130837781;
-			
 			// aapt resource value: 0x7f020116
-			public const int notification_template_icon_low_bg = 2130837782;
+			public const int notification_template_icon_bg = 2130837782;
+			
+			// aapt resource value: 0x7f020117
+			public const int notification_template_icon_low_bg = 2130837783;
 			
 			// aapt resource value: 0x7f02010f
 			public const int notification_tile_bg = 2130837775;
@@ -2779,6 +2779,9 @@ namespace ToiDau.Droid
 			
 			// aapt resource value: 0x7f020114
 			public const int tw_icon = 2130837780;
+			
+			// aapt resource value: 0x7f020115
+			public const int VerticalLine = 2130837781;
 			
 			static Drawable()
 			{

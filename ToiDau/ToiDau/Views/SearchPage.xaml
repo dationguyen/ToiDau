@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:converter="clr-namespace:ToiDau.Converters;assembly=ToiDau"
+             x:Class="ToiDau.Views.SearchPage"
+             Title="Dashboard">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="ToolbarItem" Order="Primary" Command="{Binding NotificationCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Start" BackgroundColor="#2196F3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="25"/>
+                </Grid.ColumnDefinitions>
+                <Frame Grid.Column="1" 
+                       Grid.Row="0"
+                       CornerRadius="5"
+                       Padding="0">
+                    <SearchBar Placeholder="Search" 
+                               CancelButtonColor="Black" 
+                               BackgroundColor="White"
+                               SearchCommand="{Binding SearchCommand}"
+                               Text="{Binding SearchValue}"/>
+                </Frame>
+            </Grid>
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <ListView HasUnevenRows="True"
+                          SeparatorVisibility="None"
+                          ItemsSource="{Binding SearchResultList}"
+                          ItemTapped="OnItemTapped"
+                          Margin="0,10,0,0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid ColumnSpacing="15"
+                                          BackgroundColor="White">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="60"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="15"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="10"/>
+                                            <ColumnDefinition Width="60"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="10"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="VerticalLine.png"
+                                               Grid.Row="0"
+                                               Grid.RowSpan="3"
+                                               IsVisible="{Binding IsLast, Converter={converter:BooleanConverter}}"
+                                               Grid.Column="1"
+                                               Aspect="Fill "
+                                               HorizontalOptions="Center"/>
+                                        <Frame CornerRadius="30"
+                                               BackgroundColor="Gainsboro"
+                                               Padding="0"
+                                               Grid.Row="0"
+                                               Grid.Column="1">
+                                            <StackLayout VerticalOptions="Center"
+                                                         HorizontalOptions="Center">
+                                                <Label Text="{Binding Distance}" TextColor="Black"/>
+                                            </StackLayout>
+                                        </Frame> 
+                                        <Frame CornerRadius="10"  
+                                                   Padding="0"
+                                                   Grid.Row="0" 
+                                                   Grid.RowSpan="2"
+                                                   BackgroundColor="Gainsboro"
+                                                   Grid.Column="2">
+                                            <StackLayout Orientation="Vertical"                                                           
+                                                             Padding="7,7,7,7"
+                                                             Spacing="0">
+                                                <Label Text="{Binding Address}" 
+                                                           FontAttributes="Bold" 
+                                                           FontSize="18"
+                                                           TextColor="Black"/>
+                                                <Label Text="{Binding Note1}" 
+                                                           FontSize="17"
+                                                           TextColor="DimGray"/>
+                                                <Label Text="{Binding Note2}" 
+                                                           FontSize="16"
+                                                           TextColor="DimGray"/>
+                                            </StackLayout>
+                                        </Frame>
+                                    </Grid>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

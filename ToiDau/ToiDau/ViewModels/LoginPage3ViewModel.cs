@@ -19,7 +19,7 @@ namespace ToiDau.ViewModels
 
         private void NavigateToDashboard()
         {
-            _iNavigationService.NavigateAsync("/MyMasterDetailPage/NavigationPage/DashboardPage", null, false, false);
+            _iNavigationService.NavigateAsync("/MyMasterDetailPage/NavigationPage/DashboardWithoutAss", null, false, false);
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)
