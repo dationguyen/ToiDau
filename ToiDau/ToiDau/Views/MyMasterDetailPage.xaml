@@ -25,18 +25,18 @@
                                 <Label Text="{Binding FullName}" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
                                 <Label Text="{Binding Role}" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
                             </StackLayout>
-                            <Button Grid.Row="1" Text="Profile" BackgroundColor="#1B2D43" TextColor="White" 
+                            <Button Grid.Row="1" Text="Profile" BackgroundColor="#1B2D43" TextColor="White"
                                     Command="{Binding NavigateCommand}" 
-                                    CommandParameter="NavigationPage/DashboardPage/ProfilePage"/>
-                            <Button Grid.Row="2" Text="Promotions" BackgroundColor="#1B2D43" TextColor="White" 
+                                    CommandParameter="NavigationPage/DashboardWithoutAss/ProfilePage"/>
+                            <Button Grid.Row="2" Text="Promotions" BackgroundColor="#1B2D43" TextColor="White"
                                     Command="{Binding NavigateCommand}" 
-                                    CommandParameter="NavigationPage/DashboardPage/PromotionsPage"/>
-                            <Button Grid.Row="3" Text="Help" BackgroundColor="#1B2D43" TextColor="White" 
+                                    CommandParameter="NavigationPage/DashboardWithoutAss/PromotionsPage"/>
+                            <Button Grid.Row="3" Text="Help" BackgroundColor="#1B2D43" TextColor="White"
                                     Command="{Binding NavigateCommand}" 
-                                    CommandParameter="NavigationPage/DashboardPage/HelpPage"/>
-                            <Button Grid.Row="4" Text="About" BackgroundColor="#1B2D43" TextColor="White" 
+                                    CommandParameter="NavigationPage/DashboardWithoutAss/HelpPage"/>
+                            <Button Grid.Row="4" Text="About" BackgroundColor="#1B2D43" TextColor="White"
                                     Command="{Binding NavigateCommand}" 
-                                    CommandParameter="NavigationPage/DashboardPage/AboutPage"/>
+                                    CommandParameter="NavigationPage/DashboardWithoutAss/AboutPage"/>
                         </Grid>
                     </StackLayout>
                 </ContentPage>
